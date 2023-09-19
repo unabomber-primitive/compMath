@@ -13,7 +13,7 @@ def solve_mid(a, b, f, step):
     integral = 0
     counter = 0
     if (not check(a,b,f)): return "Integrated function has discontinuity or does not defined in current interval"
-    while(((integral-int_prev)/3 >= step) or counter == 0):
+    while((abs(integral-int_prev)/3 >= step) or counter == 0):
         counter = 1
         int_prev = integral
         try:
@@ -35,7 +35,7 @@ def solve_left(a, b, f, step):
     integral = 0
     counter = 0
     if (not check(a,b,f)): return "Integrated function has discontinuity or does not defined in current interval"
-    while(((integral-int_prev) >= step) or counter == 0):
+    while((abs(integral-int_prev) >= step) or counter == 0):
         counter = 1
         int_prev = integral
         try:
@@ -56,7 +56,7 @@ def solve_right(a, b, f, step):
     integral = 0
     counter = 0
     if (not check(a,b,f)): return "Integrated function has discontinuity or does not defined in current interval"
-    while(((integral-int_prev) >= step) or counter == 0):
+    while((abs(integral-int_prev) >= step) or counter == 0):
         counter = 1
         int_prev = integral
         try:

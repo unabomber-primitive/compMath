@@ -5,7 +5,7 @@ def calculate_integral(a, b, f, epsilon):
     int_prev = 0
     integral = 0
     counter = 0
-    while(((integral-int_prev)/15 >= epsilon) or counter == 0):
+    while((abs(integral-int_prev)/15 >= epsilon) or counter == 0):
         counter = 1
         int_prev = integral
         integral = 0

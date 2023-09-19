@@ -10,7 +10,7 @@ def calculate_integral(a, b, fun, epsilon):
     except:
         return [False,"Отрезок не подходит под ОДЗ"]
     
-    while(((integral-int_prev)/3 >= epsilon) or counter == 0):
+    while((abs(integral-int_prev)/3 >= epsilon) or counter == 0):
         counter = 1
         int_prev = integral
         integral = 0
